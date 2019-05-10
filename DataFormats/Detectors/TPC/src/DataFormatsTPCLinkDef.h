@@ -26,9 +26,12 @@
 #pragma link C++ class std::vector < o2::TPC::ClusterHardwareContainerFixedSize < 8192 >> +;
 #pragma link C++ class std::vector < o2::TPC::ClusterHardwareContainer8kb > +;
 #pragma link C++ class o2::TPC::TrackTPC + ;
+#pragma link C++ class o2::TPC::LaserTrack + ;
+#pragma link C++ class o2::TPC::LaserTrackContainer + ;
 #pragma link C++ class o2::TPC::Cluster + ;
 #pragma link C++ class std::vector < o2::TPC::Cluster > +;
 #pragma link C++ class std::vector < o2::TPC::TrackTPC > +;
+#pragma link C++ class std::vector < o2::TPC::LaserTrack > +;
 #pragma link C++ class o2::TPC::ClusterNativeHelper + ;
 #pragma link C++ class o2::TPC::ClusterNativeHelper::Reader + ;
 #pragma link C++ class o2::TPC::ClusterNativeHelper::TreeWriter + ;
