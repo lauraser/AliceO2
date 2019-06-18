@@ -1241,6 +1241,26 @@ o2_define_bucket(
 
 o2_define_bucket(
     NAME
+    tpc_qc_bucket
+
+    DEPENDENCIES
+    O2DataFormatsTPC
+    O2TPCBase
+    Core Hist
+
+    INCLUDE_DIRECTORIES
+    ${ROOT_INCLUDE_DIR}
+    ${CMAKE_SOURCE_DIR}/DataFormats/Reconstruction/include
+    ${CMAKE_SOURCE_DIR}/DataFormats/Detectors/TPC/include
+    ${CMAKE_SOURCE_DIR}/DataFormats/Detectors/Common/include
+    ${CMAKE_SOURCE_DIR}/Detectors/TPC/base/include
+    ${CMAKE_SOURCE_DIR}/GPU/Common
+    ${CMAKE_SOURCE_DIR}/Common/MathUtils/include
+    ${FAIRROOT_INCLUDE_DIR}
+)
+
+o2_define_bucket(
+    NAME
     TPC_workflow_bucket
 
     DEPENDENCIES

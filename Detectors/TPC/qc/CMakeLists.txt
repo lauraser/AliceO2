@@ -1,0 +1,32 @@
+set(MODULE_NAME "TPCQC")
+
+O2_SETUP(NAME ${MODULE_NAME})
+
+set(SRCS
+  src/PID.cxx
+)
+
+set(HEADERS
+  include/TPCQC/PID.h
+)
+
+Set(LINKDEF src/TPCQCLinkDef.h)
+Set(LIBRARY_NAME ${MODULE_NAME})
+set(BUCKET_NAME tpc_qc_bucket)
+
+O2_GENERATE_LIBRARY()
+
+set(TEST_SRCS
+  test/test_PID.cxx
+)
+
+O2_GENERATE_TESTS(
+  BUCKET_NAME ${BUCKET_NAME}
+  MODULE_LIBRARY_NAME ${MODULE_NAME}
+  TEST_SRCS ${TEST_SRCS}
+)
+
+#install(
+  #DIRECTORY files
+  #DESTINATION share/Detectors/TPC/
+#)
