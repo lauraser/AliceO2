@@ -21,7 +21,7 @@
 
 using namespace o2::tpc;
 
-void runClusters(std::string_view outputFile = "ClusterQC.root", std::string_view fileName = "/home/ge56luj/alice/run_sim/tpc-native-clusters.root", const size_t maxNClusters = 0)
+void runTestCL(std::string_view outputFile = "ClusterQC.root", std::string_view fileName = "/home/ge56luj/alice/run_sim/tpc-native-clusters.root", const size_t maxNClusters = 0)
 {
   ClusterNativeHelper::Reader tpcClusterReader;
   tpcClusterReader.init(fileName.data());
